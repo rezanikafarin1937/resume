@@ -1,6 +1,20 @@
 import styles from "./template1.module.scss";
+import Progressbar from "@/components/progressbar/Progressbar";
 
 const templateFrontend = () => {
+  const skills = [
+    { title: "Html", full: 90 },
+    { title: "Css", full: 95 },
+    { title: "Sass", full: 80 },
+    { title: "Tailwind", full: 85 },
+    { title: "javaScript", full: 80 },
+    { title: "Typescript", full: 70 },
+    { title: "React", full: 85 },
+    { title: "Next", full: 80 },
+    { title: "Jest", full: 30 },
+    { title: "Php", full: 40 },
+    { title: "Laravel", full: 30 },
+  ];
   return (
     <div className={styles.box}>
       <div className={styles.box__header}>
@@ -20,33 +34,98 @@ const templateFrontend = () => {
       </div>
       <div className={styles.box__body}>
         <div className={styles.box__skills}>
-          <a href="#" style={{ width: "100%" }}>Reza Nikafarin Portfolio</a>
+          <a href="#" style={{ width: "100%" }}>
+            Reza Nikafarin Portfolio
+          </a>
           <div className="space"></div>
 
           <div className="title">Skills</div>
           <hr />
-          <div className="space">Html</div>
-          <div className="space">Css</div>
-          <div className="space">Sass</div>
-          <div className="space">Tailwind</div>
-          <div className="space">javaScript</div>
-          <div className="space">Typescript</div>
-          <div className="space">React</div>
-          <div className="space">Next</div>
-          <div className="space">Git</div>
-          <div className="space">Jest</div>
-          <div className="space">Php</div>
-          <div className="space">Laravel</div>
+          {skills.map((skill, index) => (
+            <div key={index}>
+              <div className="space">{skill.title}</div>
+              <Progressbar full={skill.full} />
+            </div>
+          ))}
         </div>
         <div className={styles.box__profile}>
           <div className="title-bold">Profile</div>
           <div className="space"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non
-            debitis ut quo! Eveniet laboriosam nesciunt, numquam obcaecati
-            temporibus quaerat minus dolorem tempora! Reprehenderit ipsum natus
-            maxime, possimus deserunt officia.
+            Highly accomplished and user-focused Front-end Developer adept in
+            collaborating with UX and design teams to plan the technical writing
+            and execution of functional specifications for websites and
+            applications. Experienced in building multi-platform websites using
+            Responsive Web Design/RWD.{" "}
           </p>
+          <div className="space-big"></div>
+          <div className="title-bold">
+            Front-end Developer resume examples & templates
+          </div>
+          <div className="title">Senior Front-end Developer</div>
+          <div className={styles.box__contact}>Agust 2015 - present</div>
+          <ul className={styles.box__contact}>
+            <li>
+              Design, develop, test and deploy design features in a timely
+              manner.
+            </li>
+            <li>
+              Continually work to ensure the user experience determines design
+              choices.
+            </li>
+            <li>
+              Work to achieve a balance between functional and aesthetic
+              designs.
+            </li>
+            <li>Maintain brand consistency throughout the design process. </li>
+            <li>Apply engineering best practices. </li>
+            <li>
+              Work to solve complex challenges with the utilization of modern
+              web application development processes and standard
+              methodologies.{" "}
+            </li>
+            <li>
+              Create wireframes to illustrate advanced solutions for
+              applications.{" "}
+            </li>
+          </ul>
+          <div className="space-big"></div>
+          <div className="title">Senior Front-end Developer</div>
+          <div className={styles.box__contact}>Agust 2015 - present</div>
+          <ul className={styles.box__contact}>
+            <li>
+              Design, develop, test and deploy design features in a timely
+              manner.
+            </li>
+            <li>
+              Continually work to ensure the user experience determines design
+              choices.
+            </li>
+            <li>
+              Work to achieve a balance between functional and aesthetic
+              designs.
+            </li>
+            <li>Maintain brand consistency throughout the design process. </li>
+            <li>Apply engineering best practices. </li>
+            <li>
+              Work to solve complex challenges with the utilization of modern
+              web application development processes and standard
+              methodologies.{" "}
+            </li>
+            <li>
+              Create wireframes to illustrate advanced solutions for
+              applications.{" "}
+            </li>
+          </ul>
+
+          <div className="title">Education</div>
+          <div className={styles.box__contact}>
+            09/2008 - 05/2012, Bachelor of Science in Computer Science,
+            University of Central Florida, Orlando
+          </div>
+          <div className="space-big"></div>
+          <div className="title">Languages</div>
+          <div className={styles.box__contact}>English</div>
         </div>
       </div>
     </div>

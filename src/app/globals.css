@@ -31,3 +31,7 @@ h6,img,p {
 .space{
   margin : .5rem 0;
 }
+
+.space-big{
+  margin: 2rem 0;
+}

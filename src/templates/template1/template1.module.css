@@ -11,9 +11,26 @@
   display: flex;
 }
 
+@media (max-width: 426px) {
+  .box__header {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .box__avatar {
   width: 15%;
   aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 426px) {
+  .box__avatar {
+    width: 35%;
+    border-radius: 50%;
+    margin-top: 1rem;
+    border: .25rem solid #fff;
+  }
 }
 
 .box img {
@@ -22,6 +39,12 @@
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+@media (max-width: 426px) {
+  .box img {
+    border-radius: 50%;
+  }
 }
 
 .box__present {
@@ -50,6 +73,10 @@
 .box__body {
   display: flex;
   padding: 1rem 0;
+}
+
+.box__body a {
+  color: #555;
 }
 
 .box__skills {
