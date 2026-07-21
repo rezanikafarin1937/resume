@@ -3,17 +3,20 @@ import Progressbar from "@/components/progressbar/Progressbar";
 
 const templateFrontend = () => {
   const skills = [
-    { title: "Html", full: 90 },
+    { title: "Html", full: 95 },
     { title: "Css", full: 95 },
-    { title: "Sass", full: 80 },
+    { title: "Sass", full: 95 },
+    { title: "BEM", full: 100 },
     { title: "Tailwind", full: 85 },
-    { title: "javaScript", full: 80 },
-    { title: "Typescript", full: 70 },
-    { title: "React", full: 85 },
-    { title: "Next", full: 80 },
-    { title: "Jest", full: 30 },
+    { title: "javaScript", full: 90 },
+    { title: "Typescript", full: 80 },
+    { title: "React", full: 90 },
+    { title: "Next", full: 85 },
+    { title: "ReactNative", full: 15 },
+    { title: "Jest", full: 20 },
     { title: "Php", full: 40 },
     { title: "Laravel", full: 30 },
+    { title: "Git", full: 80 },
   ];
   return (
     <div className={styles.box}>
@@ -27,23 +30,26 @@ const templateFrontend = () => {
             <h2>Front End Developer</h2>
           </div>
           <div className={styles.box__contact}>
-            <div>mobile : 09186936959</div>
-            <div>email : rezanikafarin100@gmail.com</div>
+            <div><span className={styles.box__email}>mobile : </span> 09186936959</div>
+            <div><span className={styles.box__email}>email : </span>  rezanikafarin100@gmail.com</div>
           </div>
         </div>
       </div>
       <div className={styles.box__body}>
         <div className={styles.box__skills}>
-          <a href="#" style={{ width: "100%" }}>
-            Reza Nikafarin Portfolio
-          </a>
-          <div className="space"></div>
+          <i>
+            <a href="#" style={{ width: "100%" }}>
+              Reza Nikafarin Portfolio
+            </a>
+          </i>
+          <div className="space-big"></div>
 
-          <div className="title">Skills</div>
+          <i className="title-bold">Skills</i>
           <hr />
+          <br />
           {skills.map((skill, index) => (
             <div key={index}>
-              <div className="space">{skill.title}</div>
+              <i className={styles.box__skills__skill}>{skill.title}</i>
               <Progressbar full={skill.full} />
             </div>
           ))}
@@ -56,7 +62,7 @@ const templateFrontend = () => {
             collaborating with UX and design teams to plan the technical writing
             and execution of functional specifications for websites and
             applications. Experienced in building multi-platform websites using
-            Responsive Web Design/RWD.{" "}
+            Responsive Web Design/RWD.
           </p>
           <div className="space-big"></div>
           <div className="title-bold">

@@ -7,29 +7,34 @@ $bg: #eee;
   padding: 2rem;
   margin: 1rem 0;
 
+  @media (max-width: 426px) {
+    padding: 0;
+  }
+
+  &__email {
+    @media (max-width: 321px) {
+        display: none;
+    }
+  }
+
   &__header {
     background-color: rgb(12, 246, 164);
     display: flex;
+    white-space: nowrap;
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
 
-    @media (max-width : 426px) {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        
+    @media (max-width: 426px) {
+      white-space: wrap;
     }
   }
 
   &__avatar {
     width: 15%;
     aspect-ratio: 1 / 1;
-    @media (max-width : 426px) {
-        width: 35%;
-        border-radius: 50%;
-        margin-top: 1rem;
-        // background-color: rgb(12, 246, 164);
-        // padding: .25rem;
-        border: .25rem solid #fff;
-
+    flex: 0 0 auto;
+    @media (max-width: 426px) {
+      width: 35%;
     }
   }
 
@@ -39,12 +44,8 @@ $bg: #eee;
     object-fit: cover;
     object-position: center;
     display: block;
-
-    @media (max-width : 426px) {
-        border-radius: 50%;
-
-    }
-}
+    border-top-left-radius: 0.25rem;
+  }
 
   &__present {
     padding: 1rem 2rem;
@@ -52,15 +53,29 @@ $bg: #eee;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    @media (min-width : 321px) and (max-width: 426px) {
+      align-items: start;
+    }
+    @media (max-width : 320px) {
+        padding: .5rem 1rem;
+    }
   }
 
   &__title {
     h1 {
       font-size: 1.5rem !important;
+
+      @media (max-width: 426px) {
+        font-size: 1.25rem !important;
+      }
     }
     h2 {
       font-size: 1.25rem !important;
       font-weight: 300;
+      @media (max-width: 426px) {
+        font-size: 1rem !important;
+      }
     }
   }
 
@@ -74,16 +89,45 @@ $bg: #eee;
     display: flex;
     padding: 1rem 0;
 
-    a{
-    color : #555;
-}
+    @media (max-width: 426px) {
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
 
+    a {
+      color: #555;
+    }
   }
   &__skills {
-    width: 15%;
+    width: 25%;
     white-space: nowrap;
+    @media (max-width: 426px) {
+      width: 100%;
+    }
+
+    &__skill {
+      font-size: 14px;
+      font-weight: bold;
+      color: #666;
+    }
   }
   &__profile {
     padding: 0 3rem;
+    @media (max-width: 426px) {
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    p {
+      width: 60%;
+      text-align: justify;
+      @media (max-width: 426px) {
+        width: 100%;
+      }
+    }
+
+    ul {
+      padding: 0;
+    }
   }
 }
