@@ -94,9 +94,6 @@ $bg: #eee;
       padding: 1rem;
     }
 
-    a {
-      color: #555;
-    }
   }
   &__skills {
     width: 25%;
@@ -130,4 +127,8 @@ $bg: #eee;
       padding: 0;
     }
   }
+      a {
+      color: #555;
+    }
+
 }

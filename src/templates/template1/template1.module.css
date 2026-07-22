@@ -113,10 +113,6 @@
   }
 }
 
-.box__body a {
-  color: #555;
-}
-
 .box__skills {
   width: 25%;
   white-space: nowrap;
@@ -158,4 +154,8 @@
 
 .box__profile ul {
   padding: 0;
+}
+
+.box a {
+  color: #555;
 }
